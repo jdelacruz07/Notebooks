@@ -12,7 +12,7 @@ public class ApiService {
 	@Autowired
 	NotebookRepository notebookRepository;
 	
-	public void addNotebook (Notebook newnotebook) {
-		notebookRepository.save(newnotebook);
+	public  Notebook addNotebook (Notebook newnotebook) {
+		return notebookRepository.save(newnotebook);
 	}
 }

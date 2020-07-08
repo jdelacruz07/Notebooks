@@ -33,9 +33,9 @@ public class Controller {
 	}
 	
 	@PostMapping
-	public void addNotebook(@RequestBody Notebook notebook) {
+	public Notebook addNotebook(@RequestBody Notebook notebook) {
 		System.out.println("Esto es un post"+ notebook);
-		apiservice.addNotebook(notebook);
+		return apiservice.addNotebook(notebook);
 		
 	}
 	
