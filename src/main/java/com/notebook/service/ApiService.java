@@ -1,5 +1,7 @@
 package com.notebook.service;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,5 +16,10 @@ public class ApiService {
 	
 	public  Notebook addNotebook (Notebook newnotebook) {
 		return notebookRepository.save(newnotebook);
+	}
+
+	public void deleteNotebook(String id) {
+		// TODO Auto-generated method stub
+		 notebookRepository.deleteById(id);
 	}
 }
