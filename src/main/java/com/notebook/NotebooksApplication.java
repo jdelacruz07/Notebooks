@@ -26,12 +26,13 @@ public class NotebooksApplication implements CommandLineRunner {
 		Notebook libreta2 = notebookInterface.save(new Notebook("Libreta de color azul", 230.0,  "/assets/IMG_4317.JPG", "Papel", "Carta"));
 		Notebook libreta3 = notebookInterface.save(new Notebook("Libreta de color azul", 120.0,  "/assets/IMG_4319.JPG", "Piel", "Bolsillo"));
 		Notebook libreta4 = notebookInterface.save(new Notebook("Libreta de color azul", 120.0,  "/assets/IMG_4326.JPG", "Tela", "Bolsillo"));
-		Notebook libreta5 = notebookInterface.save(new Notebook("Libreta de color azul", 230.0,  "/assets/IMG_4337.JPG", "Tela", "Carta"));
-		Notebook libreta6 = notebookInterface.save(new Notebook("Libreta de color azul", 230.0,  "/assets/IMG_4343.JPG", "Papel", "Carta"));
-		Notebook libreta7 = notebookInterface.save(new Notebook("Libreta de color azul", 230.0,  "/assets/IMG_4361.JPG", "Papel", "Carta"));
-		Notebook libreta8 = notebookInterface.save(new Notebook("Libreta de color azul", 230.0,  "/assets/IMG_4365.JPG", "Papel", "Carta"));
-		Notebook libreta9 = notebookInterface.save(new Notebook("Libreta de color azul", 230.0,  "/assets/IMG_4370.JPG", "Papel", "Carta"));
-		Notebook libreta10 = notebookInterface.save(new Notebook("Libreta de color azul", 230.0, "/assets/IMG_4375.JPG", "Tela", "Carta"));
+		Notebook libreta5 = notebookInterface.save(new Notebook("Libreta de color azul", 230.0,  "/assets/IMG_4343.JPG", "Papel", "Carta"));
+		Notebook libreta6 = notebookInterface.save(new Notebook("Libreta de color azul", 230.0,  "/assets/IMG_4370.JPG", "Papel", "Carta"));
+		Notebook libreta7 = notebookInterface.save(new Notebook("Libreta de color azul", 230.0, "/assets/IMG_4375.JPG", "Tela", "Carta"));
+		Notebook libreta8 = notebookInterface.save(new Notebook("Libreta de color azul", 230.0, "/assets/IMG_4376.JPG", "Papel", "Carta"));
+		Notebook libreta9 = notebookInterface.save(new Notebook("Libreta de color azul", 230.0, "/assets/IMG_4391.JPG", "Papel", "Carta"));
+		Notebook libreta10 = notebookInterface.save(new Notebook("Libreta de color azul", 230.0, "/assets/IMG_4394.JPG", "Papel", "Carta"));
+		Notebook libreta11 = notebookInterface.save(new Notebook("Libreta de color azul", 230.0, "/assets/IMG_4402.JPG", "Tela", "Carta"));
 		System.out.println(libreta1);
 		
 		List<Notebook> AllLibretas = notebookInterface.findAll(); 
