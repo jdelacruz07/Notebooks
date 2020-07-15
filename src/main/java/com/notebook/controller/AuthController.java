@@ -19,21 +19,20 @@ import com.notebook.service.ApiService;
 
 @CrossOrigin
 @RestController
-@RequestMapping("/api")
-public class Controller {
-	
-	@Autowired
-	NotebookRepository notebookRepository;
+@RequestMapping("/auth")
+public class AuthController {
 	
 	@Autowired
 	ApiService apiService;
+	@Autowired
+	NotebookRepository notebookRepository;
 	
-	@GetMapping
+	@GetMapping("/")
 	public List<Notebook> allNotebooks () {
 		return notebookRepository.findAll(); 
 	}
 	
-	@PostMapping
+	@PostMapping("/")
 	public Notebook addNotebook(@RequestBody Notebook notebook) {
 		System.out.println("Esto es un post"+ notebook);
 		return apiService.addNotebook(notebook);
@@ -47,11 +46,11 @@ public class Controller {
 		
 	}
 	
-	@PutMapping 
+	@PutMapping("/")
 	public void modifierNotebook (@RequestBody Notebook notebook) {
 		
 		System.out.println("Esto es un put");
 		
 	}
-	
+
 }
