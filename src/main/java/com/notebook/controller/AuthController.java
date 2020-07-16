@@ -30,6 +30,7 @@ public class AuthController {
 	@GetMapping("/")
 	public List<Notebook> allNotebooks () {
 		return notebookRepository.findAll(); 
+		
 	}
 	
 	@PostMapping("/")
