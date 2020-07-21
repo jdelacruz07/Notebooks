@@ -22,4 +22,14 @@ public class ApiService {
 		// TODO Auto-generated method stub
 		 notebookRepository.deleteById(id);
 	}
+	
+	public Optional<Notebook> getlNotebook(String id) {
+		return notebookRepository.findById(id);
+
+	}
+
+	public  Optional<Notebook> getNotebook(String id) {
+		// TODO Auto-generated method stub
+		return notebookRepository.findById(id);
+	}
 }

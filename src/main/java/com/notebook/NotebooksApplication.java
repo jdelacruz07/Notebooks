@@ -33,7 +33,7 @@ public class NotebooksApplication implements CommandLineRunner {
 		Notebook libreta9 = notebookInterface.save(new Notebook("Libreta de color azul", 230.0, "/assets/IMG_4391.JPG", "Papel", "Carta"));
 		Notebook libreta10 = notebookInterface.save(new Notebook("Libreta de color azul", 230.0, "/assets/IMG_4394.JPG", "Papel", "Carta"));
 		Notebook libreta11 = notebookInterface.save(new Notebook("Libreta de color azul", 230.0, "/assets/IMG_4402.JPG", "Tela", "Carta"));
-		System.out.println(libreta1);
+		System.out.println(libreta3);
 		
 		List<Notebook> AllLibretas = notebookInterface.findAll(); 
 		System.out.println(AllLibretas);
