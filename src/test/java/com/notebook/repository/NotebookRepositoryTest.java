@@ -30,5 +30,13 @@ class NotebookRepositoryTest {
 		Optional<Notebook> notebookThree = notebookRepository.findById(notebook.getId());
 		assertEquals(120, notebookThree.get().getPrice());
 	}
+	
+	@Test
+	void deleteTest() {
+		List<Notebook> notebooks = notebookRepository.findAll();
+		Notebook notebook = notebooks.get(2);
+		notebookRepository.delete(notebook);
+		assertEquals(Optional.empty(), notebookRepository.findById(notebook.getId()));
+	}
 
 }
