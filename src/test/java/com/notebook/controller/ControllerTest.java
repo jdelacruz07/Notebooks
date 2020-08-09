@@ -26,7 +26,8 @@ class ControllerTest {
 
 	@Test
 	void testAddNotebook() {
-		Notebook notebook = new Notebook("Libreta nueva", 230.0, "/assets/IMG_4406.JPG", "Papel", "Carta");
+		Notebook notebook =new Notebook("Modelo Yúga", "Encuardernacion y cubierta: tradicional de lomo recto con cubierta de papel y tela de lino", "Colores: Azul y Negro",
+				"Hojas: 100 hojas blancas", "papel", "carta", 230.0, "/assets/IMG_4299.JPG");
 		controller.addNotebook(notebook);
 		int result = controller.allNotebooks().size();
 		assertEquals(12, result);

@@ -7,26 +7,32 @@ public class Notebook {
 	
 	@Id
 	private String id;
-	
-	private String description;
-	private Double price;
-	private String urlPhoto;
+	private String model;
+	private String encuadernacion;
+	private String color;
+	private String sheets;
 	private String typeOfMaterial;
 	private String sizeOfNotebook;
+	private Double price;
+	private String urlPhoto;
 	
-	public Notebook() {
-		
-	}
-
-	public Notebook(String description, Double price, String urlPhoto, String typeOfMaterial, String sizeOfNotebook) {
+	public Notebook(String model, String encuadernacion, String color, String sheets, String typeOfMaterial,
+			String sizeOfNotebook, Double price, String urlPhoto) {
 		super();
-		this.description = description;
-		this.price = price;
-		this.urlPhoto = urlPhoto;
+		this.model = model;
+		this.encuadernacion = encuadernacion;
+		this.color = color;
+		this.sheets = sheets;
 		this.typeOfMaterial = typeOfMaterial;
 		this.sizeOfNotebook = sizeOfNotebook;
+		this.price = price;
+		this.urlPhoto = urlPhoto;
 	}
-	
+
+	public Notebook() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public String getId() {
 		return id;
 	}
@@ -35,28 +41,36 @@ public class Notebook {
 		this.id = id;
 	}
 
-	public String getDescription() {
-		return description;
+	public String getModel() {
+		return model;
 	}
 
-	public void setDescription(String description) {
-		this.description = description;
+	public void setModel(String model) {
+		this.model = model;
 	}
 
-	public Double getPrice() {
-		return price;
+	public String getEncuadernacion() {
+		return encuadernacion;
 	}
 
-	public void setPrice(Double price) {
-		this.price = price;
+	public void setEncuadernacion(String encuadernacion) {
+		this.encuadernacion = encuadernacion;
 	}
 
-	public String getUrlPhoto() {
-		return urlPhoto;
+	public String getColor() {
+		return color;
 	}
 
-	public void setUrlPhoto(String urlPhoto) {
-		this.urlPhoto = urlPhoto;
+	public void setColor(String color) {
+		this.color = color;
+	}
+
+	public String getSheets() {
+		return sheets;
+	}
+
+	public void setSheets(String sheets) {
+		this.sheets = sheets;
 	}
 
 	public String getTypeOfMaterial() {
@@ -75,11 +89,23 @@ public class Notebook {
 		this.sizeOfNotebook = sizeOfNotebook;
 	}
 
-	@Override
-	public String toString() {
-		return "Notebook [id=" + id + ", description=" + description + ", precio=" + price + ", urlPhoto=" + urlPhoto
-				+ ", typeOfMaterial=" + typeOfMaterial + ", sizeOfNotebook=" + sizeOfNotebook + "]";
+	public Double getPrice() {
+		return price;
 	}
 
+	public void setPrice(Double price) {
+		this.price = price;
+	}
+
+	public String getUrlPhoto() {
+		return urlPhoto;
+	}
+
+	public void setUrlPhoto(String urlPhoto) {
+		this.urlPhoto = urlPhoto;
+	}
+	
+	
+	
 	
 }

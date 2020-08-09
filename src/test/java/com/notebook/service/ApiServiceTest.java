@@ -24,7 +24,7 @@ class ApiServiceTest {
 	@Test
 	void testAddNotebook() {
 		Notebook notebook = new Notebook();
-		notebook.setDescription("hello");
+		notebook.setModel("hello");
 		notebook.setPrice(230.0);
 		notebook.setSizeOfNotebook("Carta");
 		notebook.setTypeOfMaterial("Papel");
@@ -32,14 +32,14 @@ class ApiServiceTest {
 		Notebook newNotebook = apiService.addNotebook(notebook);
 		
 		assertNotNull(newNotebook);
-		assertEquals("hello", newNotebook.getDescription());
+		assertEquals("hello", newNotebook.getModel());
 		
 	}
 
 	@Test
 	void testDeleteNotebook() {
 		Notebook notebook = new Notebook();
-		notebook.setDescription("hello");
+		notebook.setModel("hello");
 		notebook.setPrice(230.0);
 		notebook.setSizeOfNotebook("Carta");
 		notebook.setTypeOfMaterial("Papel");
