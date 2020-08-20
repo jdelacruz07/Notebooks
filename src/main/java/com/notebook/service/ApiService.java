@@ -15,13 +15,19 @@ public class ApiService {
 
 	@Autowired
 	NotebookRepository notebookRepository;
-	
+
 	public List<Notebook> getAllNotebooks() {
 		return notebookRepository.findAll();
 	}
-	
-	public  Notebook addNotebook (Notebook newnotebook) {
-		return notebookRepository.save(newnotebook);
+
+	public HttpStatus addNotebook(Notebook newNotebook) {
+		String isPresent = newNotebook.getId();
+		if (isPresent != null) {
+			return HttpStatus.FOUND;
+		} else {
+			notebookRepository.save(newNotebook);
+			return HttpStatus.OK;
+		}
 	}
 
 	public HttpStatus deleteNotebook(String id) {
@@ -30,14 +36,12 @@ public class ApiService {
 			notebookRepository.deleteById(id);
 			return HttpStatus.OK;
 		} else {
-			System.out.println("Llegas al fallo en el delete");
 			return HttpStatus.NOT_FOUND;
 		}
 	}
 
-	public  Optional<Notebook> getNotebook(String id) {
+	public Optional<Notebook> getNotebook(String id) {
 		return notebookRepository.findById(id);
 	}
 
-	
 }

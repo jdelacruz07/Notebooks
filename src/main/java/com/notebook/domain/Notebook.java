@@ -2,9 +2,8 @@ package com.notebook.domain;
 
 import org.springframework.data.annotation.Id;
 
-
 public class Notebook {
-	
+
 	@Id
 	private String id;
 	private String model;
@@ -15,7 +14,7 @@ public class Notebook {
 	private String sizeOfNotebook;
 	private Double price;
 	private String urlPhoto;
-	
+
 	public Notebook(String model, String encuadernacion, String color, String sheets, String typeOfMaterial,
 			String sizeOfNotebook, Double price, String urlPhoto) {
 		super();
@@ -104,8 +103,5 @@ public class Notebook {
 	public void setUrlPhoto(String urlPhoto) {
 		this.urlPhoto = urlPhoto;
 	}
-	
-	
-	
-	
+
 }

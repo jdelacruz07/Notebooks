@@ -22,31 +22,31 @@ import com.notebook.service.ApiService;
 @RestController
 @RequestMapping("/api")
 public class Controller {
-	
+
 	@Autowired
 	ApiService apiService;
-	
+
 	@GetMapping
-	public List<Notebook> allNotebooks () {
-		return apiService.getAllNotebooks();  
+	public List<Notebook> allNotebooks() {
+		return apiService.getAllNotebooks();
 	}
-	
+
 	@PostMapping
-	public Notebook addNotebook(@RequestBody Notebook notebook) {
-		System.out.println("Esto es un post"+ notebook);
-		return apiService.addNotebook(notebook);
+	public ResponseEntity addNotebook(@RequestBody Notebook notebook) {
+		HttpStatus status = apiService.addNotebook(notebook);
+		return new ResponseEntity<>(status);
 	}
-	
+
 	@DeleteMapping("/{id}")
-	public ResponseEntity<HttpStatus> deleteNotebook (@PathVariable String id) {
-		System.out.println("Esto es un delete"+ id);
-		HttpStatus result = apiService.deleteNotebook(id);
-		return new ResponseEntity<>(result);
+	public ResponseEntity deleteNotebook(@PathVariable String id) {
+		HttpStatus status = apiService.deleteNotebook(id);
+		return new ResponseEntity<>(status);
 	}
-	
-	@PutMapping 
-	public void modifierNotebook (@RequestBody Notebook notebook) {
+
+	@PutMapping
+	public void updateNotebook(@RequestBody Notebook notebook) {
 		System.out.println("Esto es un put");
+
 	}
-	
+
 }

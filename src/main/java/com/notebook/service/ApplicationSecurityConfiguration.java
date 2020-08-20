@@ -19,24 +19,19 @@ public class ApplicationSecurityConfiguration extends WebSecurityConfigurerAdapt
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		http
-			.csrf().disable()
-			.authorizeRequests()
-			.antMatchers("/*", "/assets/*").permitAll()
-			.anyRequest().authenticated()
-			.and()
-			.httpBasic();
+		http.csrf().disable().authorizeRequests().antMatchers("/*", "/assets/*").permitAll().anyRequest()
+				.authenticated().and().httpBasic();
 	}
 
 	@Bean
 	@Override
 	public UserDetailsService userDetailsService() {
 		List<UserDetails> users = new ArrayList<>();
-		users.add(User.withDefaultPasswordEncoder().username("yaharia").password("yaharia").roles("USER", "ADMIN").build());
+		users.add(User.withDefaultPasswordEncoder().username("yaharia").password("yaharia").roles("USER", "ADMIN")
+				.build());
 //		users.add(User.withDefaultPasswordEncoder().username("").password("").roles("USER").build());
 		return new InMemoryUserDetailsManager(users);
-		
+
 	}
 
-	
 }

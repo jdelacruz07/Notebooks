@@ -11,27 +11,27 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import com.notebook.domain.Notebook;
 
-
 @SpringBootTest
 class ControllerTest {
 
 	@Autowired
 	Controller controller;
-	
+
 	@Test
 	void testAllNotebooks() {
 		int result = controller.allNotebooks().size();
-		assertEquals(11, result);
+		assertEquals(10, result);
 	}
 
 	@Test
 	void testAddNotebook() {
-		Notebook notebook =new Notebook("Modelo Yúga", "Encuardernacion y cubierta: tradicional de lomo recto con cubierta de papel y tela de lino", "Colores: Azul y Negro",
-				"Hojas: 100 hojas blancas", "papel", "carta", 230.0, "/assets/IMG_4299.JPG");
+		Notebook notebook = new Notebook("Modelo Yúga",
+				"Encuardernacion y cubierta: tradicional de lomo recto con cubierta de papel y tela de lino",
+				"Colores: Azul y Negro", "Hojas: 100 hojas blancas", "papel", "carta", 230.0, "/assets/IMG_4299.JPG");
 		controller.addNotebook(notebook);
 		int result = controller.allNotebooks().size();
-		assertEquals(12, result);
-		
+		assertEquals(11, result);
+
 	}
 
 	@Test
