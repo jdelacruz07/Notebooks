@@ -27,7 +27,7 @@ public class AuthController {
 	ApiService apiService;
 
 	@GetMapping("/")
-	public List<Notebook> allNotebooks() {
+	public List<Notebook> getNotebooks() {
 		return apiService.getAllNotebooks();
 	}
 
