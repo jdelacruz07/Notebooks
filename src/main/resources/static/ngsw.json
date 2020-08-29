@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1598696230517,
+  "timestamp": 1598697414419,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -10,14 +10,14 @@
       "urls": [
         "/favicon.ico",
         "/index.html",
-        "/main-es2015.cc9479560e87876f3742.js",
-        "/main-es5.cc9479560e87876f3742.js",
+        "/main-es2015.f0f15101839da39ec882.js",
+        "/main-es5.f0f15101839da39ec882.js",
         "/manifest.webmanifest",
-        "/polyfills-es2015.d630f8d8d2f25c0ddc79.js",
-        "/polyfills-es5.d33101a7d00db04ac139.js",
-        "/runtime-es2015.0811dcefd377500b5b1a.js",
-        "/runtime-es5.0811dcefd377500b5b1a.js",
-        "/styles.3b786ce5f52b9515bcf7.css"
+        "/polyfills-es2015.4c0f76d50fe96c165b46.js",
+        "/polyfills-es5.e0c5293cb8bed00e3e7a.js",
+        "/runtime-es2015.409e6590615fb48d139f.js",
+        "/runtime-es5.409e6590615fb48d139f.js",
+        "/styles.243fd20057b9a551e022.css"
       ],
       "patterns": []
     },
@@ -119,15 +119,15 @@
     "/assets/logotipo_yaha.jpg": "e98404df576304cdb0bf702f3c67bc7bc020f315",
     "/assets/logotipo_yaha2.jpg": "16dd8a268f886af026e53d13356f4895c5f39732",
     "/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/index.html": "d600fd44cbfe00d52feeca7b815ace9e0571ee48",
-    "/main-es2015.cc9479560e87876f3742.js": "fd32787064229809c36c915f371a7ceaf69c4dce",
-    "/main-es5.cc9479560e87876f3742.js": "9b5452578e2410d6541e3ea7d091d8c55340031e",
+    "/index.html": "70d55577d79b5d401254030fbebf512bcc5cf2c3",
+    "/main-es2015.f0f15101839da39ec882.js": "bff64888e4986dbff16e415bc9c31b0bebf70cd8",
+    "/main-es5.f0f15101839da39ec882.js": "96f3de78e4dcece7b0663409dec509f337bc5e1a",
     "/manifest.webmanifest": "dc522726812e1bb2e0cd8a0d7de5ca26cfbe7736",
-    "/polyfills-es2015.d630f8d8d2f25c0ddc79.js": "90fb474e1a7d87bd57bc8a95fb3fd361b919d815",
-    "/polyfills-es5.d33101a7d00db04ac139.js": "694bec1ff7b951f42234bb9055ea01d016f0a7ac",
-    "/runtime-es2015.0811dcefd377500b5b1a.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
-    "/runtime-es5.0811dcefd377500b5b1a.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
-    "/styles.3b786ce5f52b9515bcf7.css": "d1de7154cdb3f618acaea73574ea03e258908f3b"
+    "/polyfills-es2015.4c0f76d50fe96c165b46.js": "90fb474e1a7d87bd57bc8a95fb3fd361b919d815",
+    "/polyfills-es5.e0c5293cb8bed00e3e7a.js": "555ae20709fc53cf4053c1410cf54c54dbedda64",
+    "/runtime-es2015.409e6590615fb48d139f.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "/runtime-es5.409e6590615fb48d139f.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "/styles.243fd20057b9a551e022.css": "69af0024625b97d562cb1bf05345004f707ca061"
   },
   "navigationUrls": [
     {
