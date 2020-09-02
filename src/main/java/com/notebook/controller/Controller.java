@@ -26,21 +26,26 @@ public class Controller {
 	@Autowired
 	ApiService apiService;
 
-	@GetMapping
-	public List<Notebook> getNotebooks() {
-		return apiService.getAllNotebooks();
+	@PostMapping
+	public ResponseEntity<Void> addNotebook(@RequestBody Notebook notebook) {
+		boolean isAdded = apiService.addNotebook(notebook);
+		if (isAdded) {
+			return new ResponseEntity<Void>(HttpStatus.CREATED);
+		} else {
+			return new ResponseEntity<Void>(HttpStatus.CONFLICT);
+		}
 	}
 
-	@PostMapping
-	public ResponseEntity addNotebook(@RequestBody Notebook notebook) {
-		HttpStatus status = apiService.addNotebook(notebook);
-		return new ResponseEntity<>(status);
+	@GetMapping
+	public ResponseEntity<List<Notebook>> getNotebooks() {
+		List<Notebook> notebooks = apiService.getAllNotebooks();
+		return new ResponseEntity<List<Notebook>>(notebooks, HttpStatus.OK);
 	}
 
 	@DeleteMapping("/{id}")
-	public ResponseEntity deleteNotebook(@PathVariable String id) {
-		HttpStatus status = apiService.deleteNotebook(id);
-		return new ResponseEntity<>(status);
+	public ResponseEntity<Void> deleteNotebook(@PathVariable String id) {
+		apiService.deleteNotebook(id);
+		return new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
 	}
 
 	@PutMapping

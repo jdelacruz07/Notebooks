@@ -1,10 +1,8 @@
 package com.notebook.service;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import com.notebook.domain.Notebook;
@@ -20,28 +18,24 @@ public class ApiService {
 		return notebookRepository.findAll();
 	}
 
-	public HttpStatus addNotebook(Notebook newNotebook) {
-		String isPresent = newNotebook.getId();
-		if (isPresent != null) {
-			return HttpStatus.FOUND;
+	public boolean addNotebook(Notebook newNotebook) {
+		String model = newNotebook.getModel();
+		Notebook notebook = notebookRepository.findByModel(model);
+		if (notebook != null) {
+			return false;
 		} else {
 			notebookRepository.save(newNotebook);
-			return HttpStatus.OK;
+			return true;
 		}
+
 	}
 
-	public HttpStatus deleteNotebook(String id) {
-		Optional<Notebook> notebook = notebookRepository.findById(id);
-		if (notebook.isPresent()) {
-			notebookRepository.deleteById(id);
-			return HttpStatus.OK;
-		} else {
-			return HttpStatus.NOT_FOUND;
-		}
+	public void deleteNotebook(String id) {
+		notebookRepository.deleteById(id);
 	}
 
-	public Optional<Notebook> getNotebook(String id) {
-		return notebookRepository.findById(id);
+	public Notebook getNotebook(String id) {
+		return notebookRepository.findById(id).get();
 	}
 
 }

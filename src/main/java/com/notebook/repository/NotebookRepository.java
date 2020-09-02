@@ -6,4 +6,6 @@ import com.notebook.domain.Notebook;
 
 public interface NotebookRepository extends MongoRepository<Notebook, String> {
 
+	Notebook findByModel(String model);
+
 }
