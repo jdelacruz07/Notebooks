@@ -3,6 +3,8 @@ package com.notebook.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import com.notebook.domain.Notebook;
@@ -36,6 +38,10 @@ public class ApiService {
 
 	public Notebook getNotebook(String id) {
 		return notebookRepository.findById(id).get();
+	}
+
+	public Page getNotebooksBySize(String size, Pageable pageable) {
+		return notebookRepository.findBySizeOfNotebook(size, pageable);
 	}
 
 }

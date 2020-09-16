@@ -28,8 +28,12 @@ public class AuthController {
 
 	@PostMapping("/")
 	public ResponseEntity<Void> addNotebook(@RequestBody Notebook notebook) {
-		apiService.addNotebook(notebook);
-		return new ResponseEntity<Void>(HttpStatus.CREATED);
+		boolean isAdded = apiService.addNotebook(notebook);
+		if (isAdded) {
+			return new ResponseEntity<Void>(HttpStatus.CREATED);
+		} else {
+			return new ResponseEntity<Void>(HttpStatus.CONFLICT);
+		}
 	}
 
 	@GetMapping("/")
