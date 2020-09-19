@@ -41,6 +41,11 @@ public class ControllerUnitTest {
 	@MockBean
 	private NotebookRepository notebookRepository;
 
+	@Before
+	public void setUp() {
+		MockitoAnnotations.initMocks(this);
+	}
+
 	@Test
 	public void testAddNotebook() throws Exception {
 		Notebook notebook = new Notebook("Yúga.",
