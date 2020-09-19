@@ -20,13 +20,14 @@ public class ApiService {
 		return notebookRepository.findAll();
 	}
 
-	public boolean addNotebook(Notebook newNotebook) {
-		String model = newNotebook.getModel();
-		Notebook notebook = notebookRepository.findByModel(model);
-		if (notebook != null) {
+	public boolean addNotebook(Notebook notebook) {
+		System.out.println("Passa por service 1 ");
+		String model = notebook.getModel();
+		Notebook newNotebook = notebookRepository.findByModel(model);
+		if (newNotebook != null) {
 			return false;
 		} else {
-			notebookRepository.save(newNotebook);
+			notebookRepository.save(notebook);
 			return true;
 		}
 

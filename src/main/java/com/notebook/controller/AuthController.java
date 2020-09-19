@@ -41,7 +41,7 @@ public class AuthController {
 		List<Notebook> notebooks = apiService.getAllNotebooks();
 		return new ResponseEntity<List<Notebook>>(notebooks, HttpStatus.OK);
 	}
-
+ 
 	@DeleteMapping("/{id}")
 	public ResponseEntity<Void> deleteNotebook(@PathVariable String id) {
 		apiService.deleteNotebook(id);
