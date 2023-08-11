@@ -31,7 +31,7 @@ public class ApplicationSecurityConfiguration extends WebSecurityConfigurerAdapt
 	@Override
 	public UserDetailsService userDetailsService() {
 		List<UserDetails> users = new ArrayList<>();
-		users.add(User.withDefaultPasswordEncoder().username("yaharia").password("yaharia").roles("USER", "ADMIN")
+		users.add(User.withDefaultPasswordEncoder().username("admin").password("Bismar7k").roles("USER", "ADMIN")
 				.build());
 //		users.add(User.withDefaultPasswordEncoder().username("").password("").roles("USER").build());
 		return new InMemoryUserDetailsManager(users);
